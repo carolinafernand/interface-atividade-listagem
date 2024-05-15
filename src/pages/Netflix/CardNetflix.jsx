@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from '../../components/NavBar';
-import NetflixRequests from '../../fetch/NetflixRequests'
+import NetflixRequests from '../../fetch/NetflixRequests';
 import NetflixCard from '../../components/Netflix/NetflixCard';
 import styles from './Netflix.module.css'; 
 
@@ -55,7 +55,7 @@ function CardNetflix() {
                         </div>
                     ))
                 ) : (
-                    <p>Nenhum livro encontrado.</p>
+                    <p>Nenhum filme encontrado.</p>
                 )}
             </div>
 

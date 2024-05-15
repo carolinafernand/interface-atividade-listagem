@@ -1,107 +1,51 @@
-/* Estilos para o CardAmazon */
 .ctnLivros {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
     padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-/* Estilos para o AmazonCard */
-.amazonCard {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.amazonCard h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.amazonCard p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Estilos para a Paginação */
-.pagination {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.paginationButton {
-    padding: 8px 16px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.paginationButton:hover {
-    background-color: #0056b3;
-}
-
-.paginationButton.active {
-    background-color: #0056b3;
-}
-
-.paginationButton:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-/* Media Query para telas menores */
-@media (max-width: 992px) {
-    .ctnLivros {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
-
-/* Estilos para a tabela de livros */
 .table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.table th, .table td {
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #f5f5f5;
-}
-
-.table th {
+    margin: 20px 0;
     font-size: 18px;
+    text-align: left;
+}
+
+.table thead tr {
+    background-color: #333;
+    color: #fff;
+    text-align: left;
     font-weight: bold;
-    color: #333;
 }
 
+.table th,
 .table td {
-    font-size: 14px;
-    color: #666;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
 }
 
-/* Estilos para a Paginação */
+.table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
 .pagination {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px 0;
 }
 
 .paginationButton {
-    padding: 8px 16px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 4px;
     background-color: #007bff;
-    color: #fff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -110,19 +54,64 @@
     background-color: #0056b3;
 }
 
-.paginationButton.active {
+.paginationButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* src/pages/netflix/Netflix.module.css */
+.ctnLivros {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.amazonCard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.amazonCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.paginationButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.paginationButton:hover {
     background-color: #0056b3;
 }
 
 .paginationButton:disabled {
-    background-color: #ccc;
+    background-color: #cccccc;
     cursor: not-allowed;
 }
-
-/* Media Query para telas menores */
-@media (max-width: 992px) {
-    .table th, .table td {
-        padding: 15px;
-    }
-}
-

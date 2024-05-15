@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from '../../components/NavBar';
-import NetflixRequests from '../../fetch/NetflixRequests'
+import NetflixRequests from '../../fetch/NetflixRequests';
 import styles from './Netflix.module.css';
 
 function TableNetflix() {
@@ -47,24 +47,23 @@ function TableNetflix() {
                             <tr>
                                 <th>ID</th>
                                 <th>Tipo de filme</th>
-                                <th>Titulo do filme:</th>
-                                <th>Ano de lançamento:</th>
+                                <th>Título do filme</th>
+                                <th>Ano de lançamento</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {filmesPaginados.map((filmes) => (
-                                <tr key={filmes.show_id}>
-                                    <td>{filmes.show_id}</td>
-                                    <td>{filmes.tipo}</td>
-                                    <td>{filmes.titulo}</td>
-                                    <td>{filmes.ano_lancamento}</td>
-
+                            {filmesPaginados.map((filme) => (
+                                <tr key={filme.show_id}>
+                                    <td>{filme.show_id}</td>
+                                    <td>{filme.tipo}</td>
+                                    <td>{filme.titulo}</td>
+                                    <td>{filme.ano_lancamento}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 ) : (
-                    <p>Nenhum jogador encontrado.</p>
+                    <p>Nenhum filme encontrado.</p>
                 )}
             </div>
 
